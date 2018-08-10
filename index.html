@@ -10,123 +10,111 @@
   </head>
   <body>
     <div class="container">
-
+      <div class="header">
         <h1>track suggester</h1>
-
+      </div>
+      <div class="sub-header">
         <p>The most important thing is to get the basic principles of coding down, practice a lot, and be ready to change to another language when your job inevitably does.</p>
-        <p>Fill out the survey below:</p>
+      </div>
 
-        <form id="tracker">
+      <form id="tracker">
 
+        <p>Where do you want to develop your career?</p>
+        <select class="form-control" id="where">
+          <option class="where" value="0"></option>
+          <option class="where" value="net">net</option>
+          <option class="where" value="ruby">ruby</option>
+          <option class="where" value="react">react</option>
+        </select>
 
-          <p>Select the where you want to develop your career:</p>
-          <select class="form-control" id="where">
-            <option class="where" value="0"></option>
-            <option class="where" value="net">net</option>
-            <option class="where" value="ruby">ruby</option>
-            <option class="where" value="react">react</option>
-          </select>
+        <p>Select what you want to achieve with the language:</p>
+        <select class="form-control" id="achieve">
+          <option class="achieve" value="0"></option>
+          <option class="achieve" value="net">net</option>
+          <option class="achieve" value="ruby">ruby</option>
+          <option class="achieve" value="react">react</option>
+        </select>
 
-          <p>Select what you want to achieve with the language:</p>
-          <select class="form-control" id="achieve">
-            <option class="achieve" value="0"></option>
-            <option class="achieve" value="net">net</option>
-            <option class="achieve" value="ruby">ruby</option>
-            <option class="achieve" value="react">react</option>
-          </select>
+        <p>Select the first feature of your ideal programming language:</p>
+        <select class="form-control" id="feature1">
+          <option class="feature1" value="0"></option>
+          <option class="feature1" value="net">net</option>
+          <option class="feature1" value="ruby">ruby</option>
+          <option class="feature1" value="react">react</option>
+        </select>
 
-          <p>Select the first feature of your ideal programming language:</p>
-          <select class="form-control" id="feature1">
-            <option class="feature1" value="0"></option>
-            <option class="feature1" value="net">net</option>
-            <option class="feature1" value="ruby">ruby</option>
-            <option class="feature1" value="react">react</option>
-          </select>
+        <p>Select the second feature of your ideal programming language:</p>
+        <select class="form-control" id="feature2">
+          <option class="feature2" value="0"></option>
+          <option class="feature2" value="net">net</option>
+          <option class="feature2" value="ruby">ruby</option>
+          <option class="feature2" value="react">react</option>
+        </select>
 
-          <p>Select the second feature of your ideal programming language:</p>
-          <select class="form-control" id="feature2">
-            <option class="feature2" value="0"></option>
-            <option class="feature2" value="net">net</option>
-            <option class="feature2" value="ruby">ruby</option>
-            <option class="feature2" value="react">react</option>
-          </select>
-
-          <p>Select the third feature of your ideal programming language:</p>
-          <select class="form-control" id="feature3">
-            <option class="feature3" value="0"></option>
-            <option class="feature3" value="net">net</option>
-            <option class="feature3" value="ruby">ruby</option>
-            <option class="feature3" value="react">react</option>
-          </select>
-
-
-          <button type="submit" id="choose" class="btn btn-primary">Submit</button>
-        </form>
-
-        <!--Modal-->
-
-        <div id="submitModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Track Suggestion</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <div class="imgResult">
-                  <div class="net">
-                    <img src="img/net.jpg" id="net" alt="net">
-                  </div>
-                  <div class="ruby">
-                    <img src="img/ruby.png" id="ruby" alt="ruby">
-                  </div>
-                  <div class="react">
-                    <img src="img/react.png" id="react" alt="react">
-                  </div>
-                </div>
-
-                <div class="responseResult">
-                  <p><span id="nameInput"></span>, you are in perfect match with <span id="result"></span>.</p>
-                </div>
+        <p>Select the third feature of your ideal programming language:</p>
+        <select class="form-control" id="feature3">
+          <option class="feature3" value="0"></option>
+          <option class="feature3" value="net">net</option>
+          <option class="feature3" value="ruby">ruby</option>
+          <option class="feature3" value="react">react</option>
+        </select>
 
 
-                <div class="descriptionResult">
-                  <div class="net">
-                    <h3>C#/.Net</h3>
-                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                  </div>
-                  <div class="ruby">
-                    <h3>Ruby/Rails</h3>
-                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                  </div>
-                  <div class="react">
-                    <h3>CSS/React</h3>
-                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal" id="refresh">Close</button>
-                </div>
-              </div>
+        <button type="submit" id="choose" class="btn btn-primary">Submit</button>
+      </form>
+
+      <!--Modal-->
+
+      <div id="submitModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><span id="nameInput"></span>, you are in perfect match with <span id="result"></span></h6>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-          </div>
-        </div>
-        <!-- closing modal div -->
+            <div class="modal-body">
 
-      <!-- <div class="output">
-        <h2 id="showtitle">Your result is:</h2>
-        <div class="net">
-          <img src="img/#.jpeg" id="net" alt="net">
+              <div class="imgResult">
+                <div class="net">
+                  <img src="img/net.jpg" id="net" alt="net">
+                </div>
+                <div class="ruby">
+                  <img src="img/ruby.png" id="ruby" alt="ruby">
+                </div>
+                <div class="react">
+                  <img src="img/react.png" id="react" alt="react">
+                </div>
+              </div>
+
+
+              <div class="descriptionResult">
+                <div class="net">
+                  <h3>C#/.Net</h3>
+                  <p>C# is one of the most versatile programming languages, making it a must when writing for desktop apps, background services, web applications and even mobile apps. The versatility is crucial because the investment in learning this language can be used for a wide range of things, making your skillset very portable in the job market. And now with .NET Core working brilliantly on MacOS and Linux, there is no limit to what can be achieved.</p>
+                </div>
+                <div class="ruby">
+                  <h3>Ruby/Rails</h3>
+                  <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                </div>
+                <div class="react">
+                  <h3>CSS/React</h3>
+                  <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="refresh">Close</button>
+              </div>
+
+            </div>
+            <!-- closing modal body -->
+          </div>
+          <!-- closing modal content -->
         </div>
-        <div class="ruby">
-          <img src="img/#.jpeg" id="ruby" alt="ruby">
-        </div>
-        <div class="react">
-          <img src="img/#.jpeg" id="react" alt="react">
-        </div>
-      </div> -->
-      <!-- closing output div -->
+        <!-- closing modal dialog -->
+      </div>
+      <!-- closing modal div -->
     </div>
-  <!-- closing container div -->
+    <!-- closing container div -->
   </body>
 </html>
