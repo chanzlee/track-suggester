@@ -47,7 +47,6 @@ $(document).ready(function() {
 
 
     if (countNet >= countRuby && countNet >= countReact) {
-      alert("net");
       result = "C#/.Net"
       $(".net").toggle();
     } else if (countRuby >= countNet && countRuby >= countReact ) {
