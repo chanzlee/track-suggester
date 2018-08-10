@@ -3,6 +3,7 @@ $(document).ready(function() {
   $("form#tracker").submit(function(event) {
     event.preventDefault();
 
+
     var iWhere = $("#where").val();
     var iAcheive = $("#achieve").val();
     var iFeature1 = $("#feature1").val();
@@ -12,6 +13,10 @@ $(document).ready(function() {
     if (iWhere === "0" || iAcheive === "0" || iFeature1 === "0" || iFeature2 === "0" || iFeature3 === "0" ) {
       alert("Please fill in the all blanks :)");
     } else {
+
+    $(".net").hide();
+    $(".ruby").hide();
+    $(".react").hide();
 
     // iAnswer concats all the string values from inputs
 
@@ -55,24 +60,22 @@ $(document).ready(function() {
       alert("error");
     }
 
-
     $("#result").text(result);
 
     nameInput = prompt("Please enter your name to proceed");
     $("#nameInput").text(nameInput);
-
 
     $("#submitModal").modal();
     }
     // close else of the first flow control, checking valid inputs.
   });
   // close submit function
-  $("button#refresh").click(function() {
-    event.preventDefault();
-    $(".net").hide();
-    $(".ruby").hide();
-    $(".react").hide();
-  });
+
+  // $("button#refresh").click(function() {
+  //   $(".net").hide();
+  //   $(".ruby").hide();
+  //   $(".react").hide();
+  // });
 
 });
 // close submit function
