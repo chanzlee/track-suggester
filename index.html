@@ -10,7 +10,6 @@
   </head>
   <body>
     <div class="container">
-      <div class="intro">
 
         <h1>track suggester</h1>
 
@@ -18,6 +17,8 @@
         <p>Fill out the survey below:</p>
 
         <form id="tracker">
+
+
           <p>Select the where you want to develop your career:</p>
           <select class="form-control" id="where">
             <option class="where" value="0"></option>
@@ -33,7 +34,6 @@
             <option class="achieve" value="ruby">ruby</option>
             <option class="achieve" value="react">react</option>
           </select>
-
 
           <p>Select the first feature of your ideal programming language:</p>
           <select class="form-control" id="feature1">
@@ -62,10 +62,55 @@
 
           <button type="submit" id="choose" class="btn btn-primary">Submit</button>
         </form>
-      </div>
-      <!-- closing intro div -->
 
-      <div class="output">
+        <!--Modal-->
+
+        <div id="submitModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Success!</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <div class="imgResult">
+                  <div class="net">
+                    <img src="img/#.jpeg" id="net" alt="net">
+                  </div>
+                  <div class="ruby">
+                    <img src="img/#.jpeg" id="ruby" alt="ruby">
+                  </div>
+                  <div class="react">
+                    <img src="img/#.jpeg" id="react" alt="react">
+                  </div>
+                </div>
+
+                <div class="responseResult">
+                  <p>result</p>
+                  <!-- <p>Thank you <span id="nameInput"></span>! Your appointment was successfully booked for <span id="dateInput"></span>.</p> -->
+                </div>
+
+                <div class="descriptionResult">
+                  <div class="net">
+                    <h1>net</h1>
+                  </div>
+                  <div class="ruby">
+                    <h1>ruby</h1>
+                  </div>
+                  <div class="react">
+                    <h1>react</h1>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- closing modal div -->
+
+      <!-- <div class="output">
         <h2 id="showtitle">Your result is:</h2>
         <div class="net">
           <img src="img/#.jpeg" id="net" alt="net">
@@ -76,7 +121,7 @@
         <div class="react">
           <img src="img/#.jpeg" id="react" alt="react">
         </div>
-      </div>
+      </div> -->
       <!-- closing output div -->
     </div>
   <!-- closing container div -->
