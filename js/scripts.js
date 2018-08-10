@@ -13,8 +13,6 @@ $(document).ready(function() {
       alert("Please fill in the all blanks :)");
     } else {
 
-
-
     var iAnswer = iWhere + iAcheive + iFeature1 + iFeature2 + iFeature3;
 
     alert(iAnswer);
