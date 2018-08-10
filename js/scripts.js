@@ -9,7 +9,7 @@ $(document).ready(function() {
     var iFeature2 = $("#feature2").val();
     var iFeature3 = $("#feature3").val();
 
-    if (iWhere === "" || iAcheive === "" || iFeature1 === "" || iFeature2 === "" || iFeature3 === "" ) {
+    if (iWhere === "0" || iAcheive === "0" || iFeature1 === "0" || iFeature2 === "0" || iFeature3 === "0" ) {
       alert("Please fill in the all blanks :)");
     } else {
 
