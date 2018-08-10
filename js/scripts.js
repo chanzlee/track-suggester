@@ -56,9 +56,10 @@ $(document).ready(function() {
     }
 
 
-    // var nameInput = $("#name").val();
     $("#result").text(result);
-    // $("#nameInput").text(nameInput);
+
+    nameInput = prompt("Please enter your name to proceed");
+    $("#nameInput").text(nameInput);
 
 
     $("#submitModal").modal();
