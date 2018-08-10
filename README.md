@@ -6,7 +6,7 @@
 
 ## Description
 
-_.This webpage suggest the best track in Epicodus in response to users answers. The three tracks are C#/.Net, CSS/React.js, Ruby/Rails. Back-end logic analyzes the frequency of user's answers that is linked to certain track and optimize the suggestion._
+_.This webpage suggest the best track in Epicodus in response to users answers. The three tracks include C#/.Net, CSS/React.js, Ruby/Rails. Back-end logic analyzes the frequency of the user's answers linked to relevant track and apply the information to optimize the suggestion._
 
 ## Setup/Installation Requirements
 
