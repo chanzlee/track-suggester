@@ -46,8 +46,10 @@ $(document).ready(function() {
       $(".net").toggle();
     } else if (countRuby >= countNet && countRuby >= countReact ) {
       alert("ruby");
+      $(".net").toggle();
     } else if (countReact >= countRuby && countReact >= countNet ) {
       alert("react");
+      $(".net").toggle();
     } else {
       alert("error");
     }
