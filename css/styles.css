@@ -2,6 +2,21 @@ h1 {
   text-transform: capitalize;
 }
 
+h3 {
+  text-align: center;
+}
+
 div .net, div .ruby, div.react {
   display: none;
+}
+
+img {
+  width: 460px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+span {
+  font-weight: bold;
 }

@@ -43,22 +43,35 @@ $(document).ready(function() {
 
     if (countNet >= countRuby && countNet >= countReact) {
       alert("net");
+      result = "C#/.Net"
       $(".net").toggle();
     } else if (countRuby >= countNet && countRuby >= countReact ) {
-      alert("ruby");
-      $(".net").toggle();
+      result = "Ruby/Rails"
+      $(".ruby").toggle();
     } else if (countReact >= countRuby && countReact >= countNet ) {
-      alert("react");
-      $(".net").toggle();
+      result = "CSS/React"
+      $(".react").toggle();
     } else {
       alert("error");
     }
 
+
     // var nameInput = $("#name").val();
+    $("#result").text(result);
+    // $("#nameInput").text(nameInput);
+
+
     $("#submitModal").modal();
     }
     // close else of the first flow control, checking valid inputs.
   });
-  // close click function
+  // close submit function
+  $("button#refresh").click(function() {
+    event.preventDefault();
+    $(".net").hide();
+    $(".ruby").hide();
+    $(".react").hide();
+  });
+
 });
 // close submit function
