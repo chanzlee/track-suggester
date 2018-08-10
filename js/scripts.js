@@ -1,47 +1,43 @@
-
 $(document).ready(function() {
 
-  $("button#choose").click(function() {
+  $("form#tracker").submit(function(event) {
+    event.preventDefault();
 
-    // var iGender = parseInt($("#gender").val());
-    // var iHobby = parseInt($("#hobby").val());
-    //
-    // if (iGender === 1) {
-    //   if (iHobby === 1) {
-    //     $("img#4").toggle();
-    //     $(".intro").toggle();
-    //     $("#showtitle").toggle();
-    //   } else if (iHobby === 2) {
-    //     $("img#5").toggle();
-    //     $(".intro").toggle();
-    //     $("#showtitle").toggle();
-    //   } else if (iHobby === 3) {
-    //     $("img#6").toggle();
-    //     $(".intro").toggle();
-    //     $("#showtitle").toggle();
-    //   } else {
-    //     alert("not a number");
-    //   }
-    // } else if (iGender === 2) {
-    //   if (iHobby === 1) {
-    //     $("img#1").toggle();
-    //     $(".intro").toggle();
-    //     $("#showtitle").toggle();
-    //   } else if (iHobby === 2) {
-    //     $("img#2").toggle();
-    //     $(".intro").toggle();
-    //     $("#showtitle").toggle();
-    //   } else if (iHobby === 3) {
-    //     $("img#3").toggle();
-    //     $(".intro").toggle();
-    //     $("#showtitle").toggle();
-    //   } else {
-    //     alert("not a number");
-    //   }
-    // } else {
-    //   alert("not a number");
-    // }
+    var iWhere = $("#where").val();
+    var iAcheive = $("#achieve").val();
+    var iFeature1 = $("#feature1").val();
+    var iFeature2 = $("#feature2").val();
+    var iFeature3 = $("#feature3").val();
 
+    if (iWhere === "" || iAcheive === "" || iFeature1 === "" || iFeature2 === "" || iFeature3 === "" ) {
+      alert("Please fill in the all blanks :)");
+    } else {
+
+
+
+    var iAnswer = iWhere + iAcheive + iFeature1 + iFeature2 + iFeature3;
+
+    alert(iAnswer);
+
+    var countNet = iAnswer.match(/net/g).length;
+    var countRuby = iAnswer.match(/ruby/g).length;
+    var countReact = iAnswer.match(/react/g).length;
+
+    alert(countNet);
+
+    if (countNet >= countRuby && countNet >= countReact) {
+      alert("net");
+    } else if (countRuby >= countNet && countRuby >= countReact ) {
+      alert("ruby");
+    } else if (countReact >= countRuby && countReact >= countNet ) {
+      alert("react");
+    } else {
+      alert("error");
+    }
+
+    }
+    // close else of the first flow control, checking valid inputs.
   });
-
+  // close click function
 });
+// close submit function
